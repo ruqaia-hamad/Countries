@@ -31,12 +31,10 @@ public class Update {
 
 		try {
 			Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
-			// Registering drivers
 			DriverManager.registerDriver(driver);
 
-			// Reference to connection interface
 			con = DriverManager.getConnection(url, user, pass);
-			PreparedStatement pstmt = con.prepareStatement(sql);
+			PreparedStatement pstmt =con.prepareStatement(sql);
 			pstmt.setString(1,cca2_update);
 			pstmt.setString(2,ccn3_update);
 			pstmt.setString(3,cca3_update );
@@ -44,7 +42,6 @@ public class Update {
 			pstmt.setString(5,subregion_update);
 			pstmt.setInt(6, id);
 			pstmt.executeUpdate();
-
 			String sql2 = "SELECT * FROM country WHERE id = ?";
 			PreparedStatement pstmt2 = con.prepareStatement(sql2);
 			pstmt2.setInt(1, id);

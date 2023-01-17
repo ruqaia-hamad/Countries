@@ -14,7 +14,6 @@ public class Delete {
 			throws IOException, InterruptedException, InstantiationException, Throwable, ClassNotFoundException {
 
 		Scanner sc = new Scanner(System.in);
-
 		Connection con = null;
 		Statement stmt = null;
 

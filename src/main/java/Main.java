@@ -28,8 +28,9 @@ public class Main {
 			System.out.println(" =====================================");
 			System.out.println("|  [1]READ FROM THE API               |");
 			System.out.println("|  [2]INSERT TO THE DB                |");
-			System.out.println("|  [3]UPDATE THE DATA IN DB           |");
-			System.out.println("|  [4]DELETE THE DATA FROM DB         |");
+			System.out.println("|  [3]DELETE THE DATA FROM DB         |");
+			System.out.println("|  [4]UPDATE THE DATA IN DB           |");
+			System.out.println("|  [5]EXIT                            |");
 			System.out.println(" =====================================");
 			Integer num = sc.nextInt();
 
@@ -46,6 +47,9 @@ public class Main {
 			case 4 :
 				Update.update();
 				break;
+			case 5 :
+				System.out.println("THANK YOU");
+				isExitMenu3=false; 
 				
 			}
 		}
