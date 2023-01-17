@@ -16,7 +16,7 @@ import com.google.gson.JsonParser;
 
 public class Main {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws InstantiationException, Throwable {
 
 		Scanner sc = new Scanner(System.in);
 		boolean isExitMenu3 = true;
@@ -41,7 +41,10 @@ public class Main {
 				Insert.insert();
 				break;
 			case 3 :
-				
+				Delete.deleteById();
+				break;
+			case 4 :
+				Update.update();
 				break;
 				
 			}
